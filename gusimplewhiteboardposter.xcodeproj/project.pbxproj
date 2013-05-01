@@ -177,7 +177,7 @@
 		F172A092172E789500A338D9 /* Vision_Control.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vision_Control.h; sourceTree = "<group>"; };
 		F172A093172E789500A338D9 /* Vision_Objects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vision_Objects.h; sourceTree = "<group>"; };
 		F172A094172E789500A338D9 /* WALK_Status.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WALK_Status.h; sourceTree = "<group>"; };
-		F172A095172E789500A338D9 /* WBFunctor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBFunctor.h; sourceTree = "<group>"; };
+		F172A095172E789500A338D9 /* WBFunctor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBFunctor.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		F172A096172E789500A338D9 /* WBFunctor_types_generated.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBFunctor_types_generated.h; sourceTree = "<group>"; };
 		F172A097172E789500A338D9 /* WBMsg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBMsg.h; sourceTree = "<group>"; };
 		F172A098172E789500A338D9 /* Whiteboard.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Whiteboard.cc; sourceTree = "<group>"; };
@@ -900,6 +900,7 @@
 				F1729FD9172E77FE00A338D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
