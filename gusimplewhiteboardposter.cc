@@ -194,8 +194,10 @@ static int read_input_and_post_to_whiteboard(FILE *in)
                         add_history(msgtype.c_str());
                         write_history(TYPE_HISTORY);
                 }
+                if (msgtype == "exit" || msgtype == "quit")
+                        return EXIT_SUCCESS;
                 if (msgtype == SHUTDOWN_WHITEBOARD)
-                        return EXIT_SUCCESS;    // XXX: should remove wb
+                        return EXIT_FAILURE;    // XXX: should remove wb
                 /*
                  * check if type is on known to the new whiteboard
                  */
@@ -203,6 +205,7 @@ static int read_input_and_post_to_whiteboard(FILE *in)
                 {
                         previous_type = msgtype;
                         old_value = getmsg(msgtype);
+                        if (old_value == "##unsupported##") throw "unsupported";
                 }
                 catch (...)
                 {
