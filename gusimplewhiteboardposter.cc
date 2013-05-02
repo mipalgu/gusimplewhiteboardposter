@@ -205,7 +205,11 @@ static int read_input_and_post_to_whiteboard(FILE *in)
                 {
                         previous_type = msgtype;
                         old_value = getmsg(msgtype);
-                        if (old_value == "##unsupported##") throw "unsupported";
+                        if (old_value == "##unsupported##")
+                        {
+                                cerr << msgtype << " (" << types_map[msgtype] << "): unsupported string conversion" << endl;
+                                continue;
+                        }
                 }
                 catch (...)
                 {
