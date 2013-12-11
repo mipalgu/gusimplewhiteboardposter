@@ -5,6 +5,9 @@
 #
 BIN=gusimplewhiteboardposter
 
+#Need this or we get unused method errors (depending on which types the system knows about) - Carl.
+WFLAGS=-w
+
 ALL_TARGETS=host robot
 
 USE_READLINE=yes
