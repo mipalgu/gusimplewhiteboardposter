@@ -5,8 +5,7 @@
 #
 BIN=gusimplewhiteboardposter
 
-#Need this or we get unused method errors (depending on which types the system knows about) - Carl.
-WFLAGS=-w
+WERROR=	# FIXME: needs fixing of the code generating the warnings
 
 ALL_TARGETS=host robot
 

@@ -84,12 +84,12 @@ static const char * const SHUTDOWN_WHITEBOARD = "SHUTDOWN_WHITEBOARD";
  */
 static char *history_matcher(const char *text, int state)
 {
-        static int list_index, len;
+        static unsigned long list_index, len;
         
         if (!state)
         {
                 list_index = 0;
-                len = static_cast<int>(strlen(text));
+                len = strlen(text);
         }
         
         HIST_ENTRY **list = history_list(), *entry;
