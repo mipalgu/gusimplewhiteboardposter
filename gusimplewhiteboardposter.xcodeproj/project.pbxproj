@@ -168,11 +168,11 @@
 		F172A080172E789500A338D9 /* SimpleWhiteboardTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleWhiteboardTest.h; sourceTree = "<group>"; };
 		F172A081172E789500A338D9 /* SimpleWhiteboardTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SimpleWhiteboardTest.mm; sourceTree = "<group>"; };
 		F172A083172E789500A338D9 /* FilteredVisionObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilteredVisionObject.h; sourceTree = "<group>"; };
-		F172A084172E789500A338D9 /* FSM_Control.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSM_Control.h; sourceTree = "<group>"; };
+		F172A084172E789500A338D9 /* FSM_Control.h */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = FSM_Control.h; sourceTree = "<group>"; };
 		F172A085172E789500A338D9 /* HAL_HeadTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HAL_HeadTarget.h; sourceTree = "<group>"; };
 		F172A086172E789500A338D9 /* MOTION_SDK_Interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MOTION_SDK_Interface.h; sourceTree = "<group>"; };
 		F172A087172E789500A338D9 /* NAO_State.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAO_State.h; sourceTree = "<group>"; };
-		F172A088172E789500A338D9 /* Point2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Point2D.h; sourceTree = "<group>"; };
+		F172A088172E789500A338D9 /* Point2D.h */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = Point2D.h; sourceTree = "<group>"; };
 		F172A089172E789500A338D9 /* SENSORS_BodySensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORS_BodySensors.h; sourceTree = "<group>"; };
 		F172A08A172E789500A338D9 /* SENSORS_FootSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORS_FootSensors.h; sourceTree = "<group>"; };
 		F172A08B172E789500A338D9 /* SENSORS_LedsSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORS_LedsSensors.h; sourceTree = "<group>"; };
