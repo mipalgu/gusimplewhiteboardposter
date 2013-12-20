@@ -92,9 +92,16 @@ static char *history_matcher(const char *text, int state)
                 len = strlen(text);
         }
         
-        HIST_ENTRY **list = history_list(), *entry;
-        while ((entry = list[list_index]))
+        for (int i = 0; i < history_length; i++)
         {
+                HIST_ENTRY *entry = history_get(history_base+1);
+
+                if (!entry)
+                {
+                        fprintf(stderr, "Error getting history entry %d at offset %d\n", i, history_base+i);
+                        continue;
+                }
+
                 const char *name = entry->line;
                 list_index++;
                 
@@ -121,8 +128,10 @@ static char **history_completion (const char *text, int /*start*/, int /*end*/)
 static const char *last_history(void)
 {
         if (history_length <= 0) return NULL;
-        HIST_ENTRY **list = history_list();
-        return list[history_length-1]->line;
+        HIST_ENTRY *entry = history_get(history_base+history_length-1);
+        if (!entry) return NULL;
+
+        return entry->line;
 }
 
 using namespace std;

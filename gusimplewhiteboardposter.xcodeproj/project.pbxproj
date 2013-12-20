@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1694CE81863D9B700307537 /* libreadline.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F1694CE71863D9B700307537 /* libreadline.dylib */; };
 		F1729FD2172E77FE00A338D9 /* gusimplewhiteboardposter.cc in Sources */ = {isa = PBXBuildFile; fileRef = F1729FD1172E77FE00A338D9 /* gusimplewhiteboardposter.cc */; };
 		F1729FD4172E77FE00A338D9 /* gusimplewhiteboardposter.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1729FD3172E77FE00A338D9 /* gusimplewhiteboardposter.1 */; };
 		F172A0AC172E78AF00A338D9 /* gugenericwhiteboardobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F172A01D172E789400A338D9 /* gugenericwhiteboardobject.cpp */; };
@@ -15,10 +16,16 @@
 		F172A0AF172E78AF00A338D9 /* guwhiteboardposter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F172A047172E789500A338D9 /* guwhiteboardposter.cpp */; };
 		F172A0B0172E78AF00A338D9 /* guwhiteboardtypelist_c_typestrings_generated.c in Sources */ = {isa = PBXBuildFile; fileRef = F172A072172E789500A338D9 /* guwhiteboardtypelist_c_typestrings_generated.c */; };
 		F172A0F9172E797100A338D9 /* gu_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F172A0E4172E795D00A338D9 /* gu_util.cpp */; };
-		F172A0FB172E7EE700A338D9 /* libreadline.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F172A0FA172E7EE700A338D9 /* libreadline.6.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F1694CE51863D99200307537 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F172A02C172E789400A338D9 /* gusimplewhiteboard.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F11BC0BC176123DB0069F6FB;
+			remoteInfo = guudpwhiteboard;
+		};
 		F172A0A1172E789500A338D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F172A02C172E789400A338D9 /* gusimplewhiteboard.xcodeproj */;
@@ -70,6 +77,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F1694CE71863D9B700307537 /* libreadline.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libreadline.dylib; path = usr/lib/libreadline.dylib; sourceTree = SDKROOT; };
 		F1729FCE172E77FE00A338D9 /* gusimplewhiteboardposter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gusimplewhiteboardposter; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1729FD1172E77FE00A338D9 /* gusimplewhiteboardposter.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gusimplewhiteboardposter.cc; path = ../gusimplewhiteboardposter.cc; sourceTree = "<group>"; };
 		F1729FD3172E77FE00A338D9 /* gusimplewhiteboardposter.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = gusimplewhiteboardposter.1; sourceTree = "<group>"; };
@@ -254,7 +262,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F172A0FB172E7EE700A338D9 /* libreadline.6.dylib in Frameworks */,
+				F1694CE81863D9B700307537 /* libreadline.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +272,7 @@
 		F1729FC5172E77FE00A338D9 = {
 			isa = PBXGroup;
 			children = (
+				F1694CE71863D9B700307537 /* libreadline.dylib */,
 				F172A0FA172E7EE700A338D9 /* libreadline.6.dylib */,
 				F1729FD0172E77FE00A338D9 /* gusimplewhiteboardposter */,
 				F172A0B1172E795D00A338D9 /* Common */,
@@ -362,6 +371,7 @@
 				F172A0A6172E789500A338D9 /* libguobjcwhiteboard.a */,
 				F172A0A8172E789500A338D9 /* guobjcwhiteboardTests.octest */,
 				F172A0AA172E789500A338D9 /* libgusimplewhiteboardios.a */,
+				F1694CE61863D99200307537 /* guudpwhiteboard */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -714,6 +724,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		F1694CE61863D99200307537 /* guudpwhiteboard */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = guudpwhiteboard;
+			remoteRef = F1694CE51863D99200307537 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		F172A0A2172E789500A338D9 /* libgusimplewhiteboard.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -873,6 +890,7 @@
 		F1729FD9172E77FE00A338D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/opt/local/lib,
