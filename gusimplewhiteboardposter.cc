@@ -84,7 +84,8 @@ static const char * const SHUTDOWN_WHITEBOARD = "SHUTDOWN_WHITEBOARD";
  */
 static char *history_matcher(const char *text, int state)
 {
-        static unsigned long list_index, len;
+        static unsigned long len;
+	static int list_index;
         
         if (!state)
         {
@@ -92,13 +93,13 @@ static char *history_matcher(const char *text, int state)
                 len = strlen(text);
         }
         
-        for (int i = 0; i < history_length; i++)
+        for (; list_index < history_length;)
         {
-                HIST_ENTRY *entry = history_get(history_base+1);
+                HIST_ENTRY *entry = history_get(history_base+list_index);
 
                 if (!entry)
                 {
-                        fprintf(stderr, "Error getting history entry %d at offset %d\n", i, history_base+i);
+                        fprintf(stderr, "Error getting history entry %d at offset %d\n", list_index, history_base+list_index);
                         continue;
                 }
 
