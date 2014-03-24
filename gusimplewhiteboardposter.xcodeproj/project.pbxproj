@@ -677,6 +677,23 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXLegacyTarget section */
+		F1F42EE118E015650042DDAB /* gusimplewhiteboardposter_mk */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "clean host analyze test";
+			buildConfigurationList = F1F42EE218E015650042DDAB /* Build configuration list for PBXLegacyTarget "gusimplewhiteboardposter_mk" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/bmake;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = gusimplewhiteboardposter_mk;
+			passBuildSettingsInEnvironment = 1;
+			productName = gusimplewhiteboardposter_mk;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		F1729FCD172E77FE00A338D9 /* gusimplewhiteboardposter */ = {
 			isa = PBXNativeTarget;
@@ -727,6 +744,7 @@
 			projectRoot = "";
 			targets = (
 				F1729FCD172E77FE00A338D9 /* gusimplewhiteboardposter */,
+				F1F42EE118E015650042DDAB /* gusimplewhiteboardposter_mk */,
 			);
 		};
 /* End PBXProject section */
@@ -911,6 +929,52 @@
 			};
 			name = Release;
 		};
+		F1F42EE318E015650042DDAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F1F42EE418E015650042DDAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -928,6 +992,15 @@
 			buildConfigurations = (
 				F1729FD8172E77FE00A338D9 /* Debug */,
 				F1729FD9172E77FE00A338D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1F42EE218E015650042DDAB /* Build configuration list for PBXLegacyTarget "gusimplewhiteboardposter_mk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1F42EE318E015650042DDAB /* Debug */,
+				F1F42EE418E015650042DDAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
