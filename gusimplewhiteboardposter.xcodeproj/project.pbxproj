@@ -61,6 +61,13 @@
 			remoteGlobalIDString = F1C94DA31555D3C300B717DF;
 			remoteInfo = gusimplewhiteboardios;
 		};
+		F1F42EDA18E014410042DDAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F172A02C172E789400A338D9 /* gusimplewhiteboard.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F19FA36B18DFE6280095B87D;
+			remoteInfo = simplewhiteboardtest_mk;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -372,6 +379,7 @@
 				F172A0A8172E789500A338D9 /* guobjcwhiteboardTests.octest */,
 				F172A0AA172E789500A338D9 /* libgusimplewhiteboardios.a */,
 				F1694CE61863D99200307537 /* guudpwhiteboard */,
+				F1F42EDB18E014410042DDAB /* SimpleWhiteboardTest.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -693,7 +701,7 @@
 		F1729FC6172E77FE00A338D9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Rene Hexel";
 			};
 			buildConfigurationList = F1729FC9172E77FE00A338D9 /* Build configuration list for PBXProject "gusimplewhiteboardposter" */;
@@ -766,6 +774,13 @@
 			remoteRef = F172A0A9172E789500A338D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		F1F42EDB18E014410042DDAB /* SimpleWhiteboardTest.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SimpleWhiteboardTest.bundle;
+			remoteRef = F1F42EDA18E014410042DDAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -809,7 +824,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -848,7 +862,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -890,7 +903,6 @@
 		F1729FD9172E77FE00A338D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/opt/local/lib,
