@@ -5,8 +5,6 @@
 #
 BIN=gusimplewhiteboardposter
 
-WERROR=	# FIXME: needs fixing of the code generating the warnings
-
 ALL_TARGETS=host robot
 
 USE_READLINE=yes
