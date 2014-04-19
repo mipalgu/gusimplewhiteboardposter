@@ -68,6 +68,20 @@
 			remoteGlobalIDString = F19FA36B18DFE6280095B87D;
 			remoteInfo = simplewhiteboardtest_mk;
 		};
+		F1FABD1219026D72001AD476 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F172A02C172E789400A338D9 /* gusimplewhiteboard.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F1ED584118E7C93F00864A87;
+			remoteInfo = wbperf;
+		};
+		F1FABD1419026D72001AD476 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F172A02C172E789400A338D9 /* gusimplewhiteboard.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F1ED58A418E7EF1400864A87;
+			remoteInfo = wbPerfTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -380,6 +394,8 @@
 				F172A0AA172E789500A338D9 /* libgusimplewhiteboardios.a */,
 				F1694CE61863D99200307537 /* guudpwhiteboard */,
 				F1F42EDB18E014410042DDAB /* SimpleWhiteboardTest.bundle */,
+				F1FABD1319026D72001AD476 /* wbperf */,
+				F1FABD1519026D72001AD476 /* wbPerfTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -692,6 +708,20 @@
 			passBuildSettingsInEnvironment = 1;
 			productName = gusimplewhiteboardposter_mk;
 		};
+		F1FABD0019026D72001AD476 /* Lgusimplewhiteboardposter */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = gusimplewhiteboardposter;
+			buildConfigurationList = F1FABD1719026D72001AD476 /* Build configuration list for PBXLegacyTarget "Lgusimplewhiteboardposter" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/jenkinsmon;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = Lgusimplewhiteboardposter;
+			passBuildSettingsInEnvironment = 0;
+			productName = Lgusimplewhiteboardposter;
+		};
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
@@ -745,6 +775,7 @@
 			targets = (
 				F1729FCD172E77FE00A338D9 /* gusimplewhiteboardposter */,
 				F1F42EE118E015650042DDAB /* gusimplewhiteboardposter_mk */,
+				F1FABD0019026D72001AD476 /* Lgusimplewhiteboardposter */,
 			);
 		};
 /* End PBXProject section */
@@ -797,6 +828,20 @@
 			fileType = wrapper.cfbundle;
 			path = SimpleWhiteboardTest.bundle;
 			remoteRef = F1F42EDA18E014410042DDAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F1FABD1319026D72001AD476 /* wbperf */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = wbperf;
+			remoteRef = F1FABD1219026D72001AD476 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F1FABD1519026D72001AD476 /* wbPerfTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = wbPerfTests.octest;
+			remoteRef = F1FABD1419026D72001AD476 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -975,6 +1020,52 @@
 			};
 			name = Release;
 		};
+		F1FABD0119026D72001AD476 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F1FABD0219026D72001AD476 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1004,6 +1095,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F1FABD1719026D72001AD476 /* Build configuration list for PBXLegacyTarget "Lgusimplewhiteboardposter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1FABD0119026D72001AD476 /* Debug */,
+				F1FABD0219026D72001AD476 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
