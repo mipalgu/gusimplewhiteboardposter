@@ -86,8 +86,8 @@ catkin_package(
 ###########
 
 set(CMAKE_C_FLAGS "-std=c99")
-set(CMAKE_CXX_FLAGS "-std=c++11 -stdlib=libc++")
-set(CMAKE_SHARED_LINKER_FLAGS "-stdlib=libc++ -Wl,-rpath -Wl,/usr/local/lib")
+set(CMAKE_CXX_FLAGS "-std=c++11")
+set(CMAKE_SHARED_LINKER_FLAGS "-Wl,-rpath -Wl,${CMAKE_INSTALL_PREFIX}/lib")
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
