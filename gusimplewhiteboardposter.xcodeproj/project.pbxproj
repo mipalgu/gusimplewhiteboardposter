@@ -1103,6 +1103,7 @@
 				F1FABD0219026D72001AD476 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
