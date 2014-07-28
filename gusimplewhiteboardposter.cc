@@ -263,7 +263,7 @@ int main(int /*argc*/, char *argv[])
         progname = basename(argv[0]);
 
         using_history();
-        rl_readline_name = (char *) progname;
+        rl_readline_name = const_cast<char *>(progname);
         rl_attempted_completion_function = history_completion;
 
         return read_input_and_post_to_whiteboard(stdin);
