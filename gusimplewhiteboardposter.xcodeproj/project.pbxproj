@@ -99,6 +99,7 @@
 
 /* Begin PBXFileReference section */
 		F1694CE71863D9B700307537 /* libreadline.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libreadline.dylib; path = usr/lib/libreadline.dylib; sourceTree = SDKROOT; };
+		F16B9E881A31483000552CE6 /* gusimplewhiteboardposter.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = gusimplewhiteboardposter.md; sourceTree = "<group>"; };
 		F1729FCE172E77FE00A338D9 /* gusimplewhiteboardposter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gusimplewhiteboardposter; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1729FD1172E77FE00A338D9 /* gusimplewhiteboardposter.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gusimplewhiteboardposter.cc; path = ../gusimplewhiteboardposter.cc; sourceTree = "<group>"; };
 		F1729FD3172E77FE00A338D9 /* gusimplewhiteboardposter.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = gusimplewhiteboardposter.1; sourceTree = "<group>"; };
@@ -314,6 +315,7 @@
 			children = (
 				F1729FD1172E77FE00A338D9 /* gusimplewhiteboardposter.cc */,
 				F1729FD3172E77FE00A338D9 /* gusimplewhiteboardposter.1 */,
+				F16B9E881A31483000552CE6 /* gusimplewhiteboardposter.md */,
 				F172A01B172E789400A338D9 /* gusimplewhiteboard */,
 			);
 			path = gusimplewhiteboardposter;
@@ -390,7 +392,7 @@
 				F172A0A2172E789500A338D9 /* libgusimplewhiteboard.a */,
 				F172A0A4172E789500A338D9 /* SimpleWhiteboardTest.xctest */,
 				F172A0A6172E789500A338D9 /* libguobjcwhiteboard.a */,
-				F172A0A8172E789500A338D9 /* guobjcwhiteboardTests.octest */,
+				F172A0A8172E789500A338D9 /* guobjcwhiteboardTests.xctest */,
 				F172A0AA172E789500A338D9 /* libgusimplewhiteboardios.a */,
 				F1694CE61863D99200307537 /* guudpwhiteboard */,
 				F1F42EDB18E014410042DDAB /* SimpleWhiteboardTest.bundle */,
@@ -809,10 +811,10 @@
 			remoteRef = F172A0A5172E789500A338D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F172A0A8172E789500A338D9 /* guobjcwhiteboardTests.octest */ = {
+		F172A0A8172E789500A338D9 /* guobjcwhiteboardTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = guobjcwhiteboardTests.octest;
+			path = guobjcwhiteboardTests.xctest;
 			remoteRef = F172A0A7172E789500A338D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};

@@ -1,0 +1,5 @@
+/**
+@mainpage Command Line Utility for sending Whiteboard Messages
+
+The gusimplewhiteboardposter command allows sending messages to the whiteboard.
+*/

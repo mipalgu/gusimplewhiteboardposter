@@ -2,7 +2,7 @@
  *  gusimplewhiteboardposter.cc
  *
  *  Created by Rene Hexel on 29/04/13.
- *  Copyright (c) 2013 Rene Hexel.
+ *  Copyright (c) 2013, 2014 Rene Hexel.
  *  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -258,6 +258,11 @@ static int read_input_and_post_to_whiteboard(FILE *in)
 }
 
 
+/**
+ * Simplewhiteboard poster main function.
+ * @param argv  no parameters are used except for the program name
+ * @return EXIT_SUCCESS if exiting normally, EXIT_FAILURE if SHUTDOWN_WHITEBOARD command was issued or an unrecoverable error occurred.
+ */
 int main(int /*argc*/, char *argv[])
 {
         progname = basename(argv[0]);
