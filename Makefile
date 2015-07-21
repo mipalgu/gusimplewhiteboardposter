@@ -5,7 +5,8 @@
 #
 BIN=gusimplewhiteboardposter
 
-ALL_TARGETS=host robot
+ALL_TARGETS=host robot doc
+CI_SERVER_DOC_SUBDIR=utils
 
 USE_READLINE=yes
 

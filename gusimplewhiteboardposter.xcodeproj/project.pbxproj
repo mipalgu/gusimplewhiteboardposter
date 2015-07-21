@@ -99,6 +99,7 @@
 
 /* Begin PBXFileReference section */
 		F1694CE71863D9B700307537 /* libreadline.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libreadline.dylib; path = usr/lib/libreadline.dylib; sourceTree = SDKROOT; };
+		F16B9E881A31483000552CE6 /* gusimplewhiteboardposter.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = gusimplewhiteboardposter.md; sourceTree = "<group>"; };
 		F1729FCE172E77FE00A338D9 /* gusimplewhiteboardposter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gusimplewhiteboardposter; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1729FD1172E77FE00A338D9 /* gusimplewhiteboardposter.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gusimplewhiteboardposter.cc; path = ../gusimplewhiteboardposter.cc; sourceTree = "<group>"; };
 		F1729FD3172E77FE00A338D9 /* gusimplewhiteboardposter.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = gusimplewhiteboardposter.1; sourceTree = "<group>"; };
@@ -107,7 +108,7 @@
 		F172A01E172E789400A338D9 /* gugenericwhiteboardobject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gugenericwhiteboardobject.h; sourceTree = "<group>"; };
 		F172A020172E789400A338D9 /* guobjcwhiteboard-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "guobjcwhiteboard-Prefix.pch"; sourceTree = "<group>"; };
 		F172A021172E789400A338D9 /* ObjCWhiteboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCWhiteboard.h; sourceTree = "<group>"; };
-		F172A022172E789400A338D9 /* ObjCWhiteboard.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjCWhiteboard.mm; sourceTree = "<group>"; };
+		F172A022172E789400A338D9 /* ObjCWhiteboard.mm */ = {isa = PBXFileReference; indentWidth = 8; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjCWhiteboard.mm; sourceTree = "<group>"; };
 		F172A023172E789400A338D9 /* ObjCWhiteboardDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCWhiteboardDelegate.h; sourceTree = "<group>"; };
 		F172A026172E789400A338D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F172A027172E789400A338D9 /* guobjcwhiteboardTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "guobjcwhiteboardTests-Info.plist"; sourceTree = "<group>"; };
@@ -222,7 +223,7 @@
 		F172A0BB172E795D00A338D9 /* alternative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = alternative.h; sourceTree = "<group>"; };
 		F172A0BC172E795D00A338D9 /* cdecl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cdecl.h; sourceTree = "<group>"; };
 		F172A0BD172E795D00A338D9 /* defs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = defs.h; sourceTree = "<group>"; };
-		F172A0BE172E795D00A338D9 /* domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = domain.h; sourceTree = "<group>"; };
+		F172A0BE172E795D00A338D9 /* domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = domain.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		F172A0BF172E795D00A338D9 /* error.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = error.h; sourceTree = "<group>"; };
 		F172A0C0172E795D00A338D9 /* gccmacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gccmacro.h; sourceTree = "<group>"; };
 		F172A0C1172E795D00A338D9 /* llist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = llist.h; sourceTree = "<group>"; };
@@ -314,6 +315,7 @@
 			children = (
 				F1729FD1172E77FE00A338D9 /* gusimplewhiteboardposter.cc */,
 				F1729FD3172E77FE00A338D9 /* gusimplewhiteboardposter.1 */,
+				F16B9E881A31483000552CE6 /* gusimplewhiteboardposter.md */,
 				F172A01B172E789400A338D9 /* gusimplewhiteboard */,
 			);
 			path = gusimplewhiteboardposter;
@@ -388,9 +390,9 @@
 			isa = PBXGroup;
 			children = (
 				F172A0A2172E789500A338D9 /* libgusimplewhiteboard.a */,
-				F172A0A4172E789500A338D9 /* SimpleWhiteboardTest.octest */,
+				F172A0A4172E789500A338D9 /* SimpleWhiteboardTest.xctest */,
 				F172A0A6172E789500A338D9 /* libguobjcwhiteboard.a */,
-				F172A0A8172E789500A338D9 /* guobjcwhiteboardTests.octest */,
+				F172A0A8172E789500A338D9 /* guobjcwhiteboardTests.xctest */,
 				F172A0AA172E789500A338D9 /* libgusimplewhiteboardios.a */,
 				F1694CE61863D99200307537 /* guudpwhiteboard */,
 				F1F42EDB18E014410042DDAB /* SimpleWhiteboardTest.bundle */,
@@ -795,10 +797,10 @@
 			remoteRef = F172A0A1172E789500A338D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F172A0A4172E789500A338D9 /* SimpleWhiteboardTest.octest */ = {
+		F172A0A4172E789500A338D9 /* SimpleWhiteboardTest.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = SimpleWhiteboardTest.octest;
+			path = SimpleWhiteboardTest.xctest;
 			remoteRef = F172A0A3172E789500A338D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -809,10 +811,10 @@
 			remoteRef = F172A0A5172E789500A338D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F172A0A8172E789500A338D9 /* guobjcwhiteboardTests.octest */ = {
+		F172A0A8172E789500A338D9 /* guobjcwhiteboardTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = guobjcwhiteboardTests.octest;
+			path = guobjcwhiteboardTests.xctest;
 			remoteRef = F172A0A7172E789500A338D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
