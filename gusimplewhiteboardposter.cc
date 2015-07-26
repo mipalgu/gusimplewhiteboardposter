@@ -62,6 +62,7 @@
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wpadded"
+#pragma clang diagnostic ignored "-Wreserved-id-macro"
 
 #include <libgen.h>
 #include <readline/readline.h>
