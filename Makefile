@@ -3,9 +3,7 @@
 #
 # GU whiteboard poster module Makefile
 #
-BIN=gusimplewhiteboardposter
-
-ALL_TARGETS=host robot doc
+ALL_TARGETS=host robot xc doc
 CI_SERVER_DOC_SUBDIR=utils
 
 USE_READLINE=yes
