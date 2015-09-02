@@ -3,7 +3,7 @@
 #
 # GU whiteboard poster module Makefile
 #
-ALL_TARGETS=host robot xc doc
+ALL_TARGETS=host robot analyse xc doc
 CI_SERVER_DOC_SUBDIR=utils
 
 USE_READLINE=yes
