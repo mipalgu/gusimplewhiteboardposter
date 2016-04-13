@@ -195,14 +195,14 @@
 		F172A086172E789500A338D9 /* MOTION_SDK_Interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MOTION_SDK_Interface.h; sourceTree = "<group>"; };
 		F172A087172E789500A338D9 /* NAO_State.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAO_State.h; sourceTree = "<group>"; };
 		F172A088172E789500A338D9 /* Point2D.h */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = Point2D.h; sourceTree = "<group>"; };
-		F172A089172E789500A338D9 /* SENSORS_BodySensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORS_BodySensors.h; sourceTree = "<group>"; };
-		F172A08A172E789500A338D9 /* SENSORS_FootSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORS_FootSensors.h; sourceTree = "<group>"; };
-		F172A08B172E789500A338D9 /* SENSORS_LedsSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORS_LedsSensors.h; sourceTree = "<group>"; };
-		F172A08C172E789500A338D9 /* SENSORS_LegJointSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORS_LegJointSensors.h; sourceTree = "<group>"; };
-		F172A08D172E789500A338D9 /* SENSORS_LegJointTemps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORS_LegJointTemps.h; sourceTree = "<group>"; };
-		F172A08E172E789500A338D9 /* SENSORS_SonarSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORS_SonarSensors.h; sourceTree = "<group>"; };
-		F172A08F172E789500A338D9 /* SENSORS_TorsoJointSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORS_TorsoJointSensors.h; sourceTree = "<group>"; };
-		F172A090172E789500A338D9 /* SENSORS_TorsoJointTemps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORS_TorsoJointTemps.h; sourceTree = "<group>"; };
+		F172A089172E789500A338D9 /* SENSORSBodySensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSBodySensors.h; sourceTree = "<group>"; };
+		F172A08A172E789500A338D9 /* SENSORSFootSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSFootSensors.h; sourceTree = "<group>"; };
+		F172A08B172E789500A338D9 /* SENSORSLedsSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSLedsSensors.h; sourceTree = "<group>"; };
+		F172A08C172E789500A338D9 /* SENSORSLegJointSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSLegJointSensors.h; sourceTree = "<group>"; };
+		F172A08D172E789500A338D9 /* SENSORSLegJointTemps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSLegJointTemps.h; sourceTree = "<group>"; };
+		F172A08E172E789500A338D9 /* SENSORSSonarSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSSonarSensors.h; sourceTree = "<group>"; };
+		F172A08F172E789500A338D9 /* SENSORSTorsoJointSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSTorsoJointSensors.h; sourceTree = "<group>"; };
+		F172A090172E789500A338D9 /* SENSORSTorsoJointTemps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSTorsoJointTemps.h; sourceTree = "<group>"; };
 		F172A091172E789500A338D9 /* UDPReceiverNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UDPReceiverNotification.h; sourceTree = "<group>"; };
 		F172A092172E789500A338D9 /* Vision_Control.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vision_Control.h; sourceTree = "<group>"; };
 		F172A093172E789500A338D9 /* Vision_Objects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vision_Objects.h; sourceTree = "<group>"; };
@@ -535,14 +535,14 @@
 				F172A086172E789500A338D9 /* MOTION_SDK_Interface.h */,
 				F172A087172E789500A338D9 /* NAO_State.h */,
 				F172A088172E789500A338D9 /* Point2D.h */,
-				F172A089172E789500A338D9 /* SENSORS_BodySensors.h */,
-				F172A08A172E789500A338D9 /* SENSORS_FootSensors.h */,
-				F172A08B172E789500A338D9 /* SENSORS_LedsSensors.h */,
-				F172A08C172E789500A338D9 /* SENSORS_LegJointSensors.h */,
-				F172A08D172E789500A338D9 /* SENSORS_LegJointTemps.h */,
-				F172A08E172E789500A338D9 /* SENSORS_SonarSensors.h */,
-				F172A08F172E789500A338D9 /* SENSORS_TorsoJointSensors.h */,
-				F172A090172E789500A338D9 /* SENSORS_TorsoJointTemps.h */,
+				F172A089172E789500A338D9 /* SENSORSBodySensors.h */,
+				F172A08A172E789500A338D9 /* SENSORSFootSensors.h */,
+				F172A08B172E789500A338D9 /* SENSORSLedsSensors.h */,
+				F172A08C172E789500A338D9 /* SENSORSLegJointSensors.h */,
+				F172A08D172E789500A338D9 /* SENSORSLegJointTemps.h */,
+				F172A08E172E789500A338D9 /* SENSORSSonarSensors.h */,
+				F172A08F172E789500A338D9 /* SENSORSTorsoJointSensors.h */,
+				F172A090172E789500A338D9 /* SENSORSTorsoJointTemps.h */,
 				F172A091172E789500A338D9 /* UDPReceiverNotification.h */,
 				F172A092172E789500A338D9 /* Vision_Control.h */,
 				F172A093172E789500A338D9 /* Vision_Objects.h */,
