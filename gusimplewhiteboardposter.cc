@@ -2,7 +2,7 @@
  *  gusimplewhiteboardposter.cc
  *
  *  Created by Rene Hexel on 29/04/13.
- *  Copyright (c) 2013, 2014 Rene Hexel.
+ *  Copyright (c) 2013, 2014, 2016 Rene Hexel.
  *  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -64,6 +64,7 @@
 #pragma clang diagnostic ignored "-Wpadded"
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
 
+#include <unistd.h>
 #include <libgen.h>
 #include <readline/readline.h>
 #include <readline/history.h>
@@ -170,7 +171,7 @@ static void load_value_history(string msgtype)
 /**
  * read intput from the user and post
  */
-static int read_input_and_post_to_whiteboard(FILE *in)
+static int read_input_and_post_to_whiteboard(gu_simple_whiteboard_descriptor *wbd, FILE *in)
 {
 	string previous_type, prompt, old_value;
         char *line = NULL;
@@ -248,7 +249,7 @@ static int read_input_and_post_to_whiteboard(FILE *in)
                         add_history(value.c_str());
                         write_history(VALUE_HISTORY(msgtype));
                 }
-                if (post(msgtype, value))
+                if (post(msgtype, value, wbd))
                         old_value = value;
                 else
                         cerr << "Could not set " << msgtype << " (" << types_map[msgtype] << ") to '" << value << "'" << endl;
@@ -264,7 +265,7 @@ static int read_input_and_post_to_whiteboard(FILE *in)
  * @param argv  no parameters are used except for the program name
  * @return EXIT_SUCCESS if exiting normally, EXIT_FAILURE if SHUTDOWN_WHITEBOARD command was issued or an unrecoverable error occurred.
  */
-int main(int /*argc*/, char *argv[])
+int main(int argc, char *argv[])
 {
         progname = basename(argv[0]);
 
@@ -272,7 +273,29 @@ int main(int /*argc*/, char *argv[])
         rl_readline_name = const_cast<char *>(progname);
         rl_attempted_completion_function = history_completion;
 
-        return read_input_and_post_to_whiteboard(stdin);
+#ifdef CUSTOM_WB_NAME
+        const char *wbname = CUSTOM_WB_NAME;
+#else
+        const char *wbname = NULL;
+#endif
+        gu_simple_whiteboard_descriptor *wbd = NULL;
+        int ch;
+        while ((ch = getopt(argc, argv, "w:")) != -1) switch (ch)
+        {
+            case 'w':
+                wbname = optarg;
+                break;
+            case '?':
+            default:
+                fprintf(stderr, "Usage: %s [-w whiteboard_name]\n", argv[0]);
+                exit(EXIT_FAILURE);
+        }
+
+        if (wbname) wbd = gsw_new_whiteboard(wbname);
+        int rv = read_input_and_post_to_whiteboard(wbd, stdin);
+        if (wbd) gsw_free_whiteboard(wbd);
+
+        return rv;
 }
 
 
