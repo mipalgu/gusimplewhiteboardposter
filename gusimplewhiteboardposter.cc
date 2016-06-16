@@ -216,7 +216,7 @@ static int read_input_and_post_to_whiteboard(gu_simple_whiteboard_descriptor *wb
                 try
                 {
                         previous_type = msgtype;
-                        old_value = getmsg(msgtype);
+                        old_value = getmsg(msgtype, NULL, wbd);
                         if (old_value == "##unsupported##")
                         {
                                 cerr << msgtype << " (" << types_map[msgtype] << "): unsupported string conversion" << endl;
