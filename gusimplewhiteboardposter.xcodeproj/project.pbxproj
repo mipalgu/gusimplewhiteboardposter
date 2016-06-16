@@ -760,6 +760,11 @@
 			attributes = {
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Rene Hexel";
+				TargetAttributes = {
+					F1729FCD172E77FE00A338D9 = {
+						LastSwiftMigration = 0800;
+					};
+				};
 			};
 			buildConfigurationList = F1729FC9172E77FE00A338D9 /* Build configuration list for PBXProject "gusimplewhiteboardposter" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -990,6 +995,7 @@
 					/opt/local/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1001,6 +1007,7 @@
 					/opt/local/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
