@@ -147,10 +147,6 @@
 		F172A046172E789500A338D9 /* guwhiteboardgetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = guwhiteboardgetter.h; sourceTree = "<group>"; };
 		F172A047172E789500A338D9 /* guwhiteboardposter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = guwhiteboardposter.cpp; sourceTree = "<group>"; };
 		F172A048172E789500A338D9 /* guwhiteboardposter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = guwhiteboardposter.h; sourceTree = "<group>"; };
-		F172A04B172E789500A338D9 /* .cookie */ = {isa = PBXFileReference; lastKnownFileType = text; path = .cookie; sourceTree = "<group>"; };
-		F172A04C172E789500A338D9 /* .pre-build-cookie */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".pre-build-cookie"; sourceTree = "<group>"; };
-		F172A04D172E789500A338D9 /* guwhiteboardtypegenerator */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = guwhiteboardtypegenerator; sourceTree = "<group>"; };
-		F172A04E172E789500A338D9 /* guwhiteboardtypegenerator.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = guwhiteboardtypegenerator.o; sourceTree = "<group>"; };
 		F172A04F172E789500A338D9 /* create_map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = create_map.h; sourceTree = "<group>"; };
 		F172A050172E789500A338D9 /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
 		F172A051172E789500A338D9 /* guwhiteboardtypegenerator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = guwhiteboardtypegenerator.cpp; sourceTree = "<group>"; };
@@ -454,7 +450,6 @@
 		F172A049172E789500A338D9 /* guwhiteboardtypegenerator */ = {
 			isa = PBXGroup;
 			children = (
-				F172A04A172E789500A338D9 /* build.host */,
 				F172A04F172E789500A338D9 /* create_map.h */,
 				F172A050172E789500A338D9 /* GNUmakefile */,
 				F172A051172E789500A338D9 /* guwhiteboardtypegenerator.cpp */,
@@ -463,17 +458,6 @@
 				F172A056172E789500A338D9 /* test */,
 			);
 			path = guwhiteboardtypegenerator;
-			sourceTree = "<group>";
-		};
-		F172A04A172E789500A338D9 /* build.host */ = {
-			isa = PBXGroup;
-			children = (
-				F172A04B172E789500A338D9 /* .cookie */,
-				F172A04C172E789500A338D9 /* .pre-build-cookie */,
-				F172A04D172E789500A338D9 /* guwhiteboardtypegenerator */,
-				F172A04E172E789500A338D9 /* guwhiteboardtypegenerator.o */,
-			);
-			path = build.host;
 			sourceTree = "<group>";
 		};
 		F172A053172E789500A338D9 /* Products */ = {
