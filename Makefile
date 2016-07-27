@@ -5,6 +5,7 @@
 #
 ALL_TARGETS=host robot analyse xc doc
 CI_SERVER_DOC_SUBDIR=utils
+CATKIN_COMPILE_UTIL=YES
 
 USE_READLINE=yes
 
