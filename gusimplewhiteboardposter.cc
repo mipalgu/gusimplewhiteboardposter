@@ -63,9 +63,14 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wpadded"
 #pragma clang diagnostic ignored "-Wreserved-id-macro"
+#pragma clang diagnostic ignored "-Wunused-macros"
 
-#include <unistd.h>
+#undef __block
+#define __block _xblock
+#include <unistd.h> //optargs
 #include <libgen.h>
+#undef __block
+#define __block __attribute__((__blocks__(byref)))
 #include <readline/readline.h>
 #include <readline/history.h>
 
