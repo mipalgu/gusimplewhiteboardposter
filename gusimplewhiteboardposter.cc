@@ -71,8 +71,11 @@
 #include <libgen.h>
 #undef __block
 #define __block __attribute__((__blocks__(byref)))
+
+#ifndef WITHOUT_READLINE
 #include <readline/readline.h>
 #include <readline/history.h>
+#endif
 
 #include "gu_util.h"
 #include "gugenericwhiteboardobject.h"
@@ -85,6 +88,12 @@
 
 static const char *progname;
 static const char * const SHUTDOWN_WHITEBOARD = "SHUTDOWN_WHITEBOARD";
+
+using namespace std;
+using namespace guWhiteboard;
+
+
+#ifndef WITHOUT_READLINE
 
 /**
  * Return a match if the given text can be found in the history list
@@ -99,7 +108,7 @@ static char *history_matcher(const char *text, int state)
                 list_index = 0;
                 len = strlen(text);
         }
-        
+
         for (; list_index < history_length;)
         {
                 HIST_ENTRY *entry = history_get(history_base+list_index);
@@ -142,9 +151,6 @@ static const char *last_history(void)
         return entry->line;
 }
 
-using namespace std;
-using namespace guWhiteboard;
-
 /**
  * load message type history
  */
@@ -170,6 +176,7 @@ static void load_value_history(string msgtype)
         read_history(VALUE_HISTORY(msgtype));
 }
 
+#endif // WITHOUT_READLINE
 
 
 
@@ -185,11 +192,14 @@ static int read_input_and_post_to_whiteboard(gu_simple_whiteboard_descriptor *wb
 
         do
         {
+#ifndef WITHOUT_READLINE
                 if (in != stdin)
                 {
+#endif
                         linelen = getline(&line, &linecap, in);
                         if (linelen <= 0)
                                 return ferror(in) ? EXIT_FAILURE : EXIT_SUCCESS;
+#ifndef WITHOUT_READLINE
                 }
                 else
                 {
@@ -202,15 +212,18 @@ static int read_input_and_post_to_whiteboard(gu_simple_whiteboard_descriptor *wb
                         prompt = string("msg type (") + previous_type + ")? ";
                         line = readline(prompt.c_str());
                 }
+#endif
                 string msgtype(line);
                 gu_trim(msgtype);
                 if (!msgtype.length())
                         msgtype = previous_type;
+#ifndef WITHOUT_READLINE
                 else if (in == stdin && msgtype != previous_type)
                 {
                         add_history(msgtype.c_str());
                         write_history(TYPE_HISTORY);
                 }
+#endif
                 if (msgtype == "exit" || msgtype == "quit")
                         return EXIT_SUCCESS;
                 if (msgtype == SHUTDOWN_WHITEBOARD)
@@ -233,11 +246,14 @@ static int read_input_and_post_to_whiteboard(gu_simple_whiteboard_descriptor *wb
                         cerr << msgtype << " (" << types_map[msgtype] << ") does not support string conversion" << endl;
                         continue;
                 }
+#ifndef WITHOUT_READLINE
                 if (in != stdin)
                 {
+#endif
                         linelen = getline(&line, &linecap, in);
                         if (linelen <= 0)
                                 return ferror(in) ? EXIT_FAILURE : EXIT_SUCCESS;
+#ifndef WITHOUT_READLINE
                 }
                 else
                 {
@@ -245,15 +261,18 @@ static int read_input_and_post_to_whiteboard(gu_simple_whiteboard_descriptor *wb
                         prompt = string("value (") + old_value + ")? ";
                         line = readline(prompt.c_str());
                 }
+#endif
                 string value(line);
                 gu_trim(value);
                 if (!value.length())
                         value = old_value;
+#ifndef WITHOUT_READLINE
                 else if (in == stdin && value != old_value)
                 {
                         add_history(value.c_str());
                         write_history(VALUE_HISTORY(msgtype));
                 }
+#endif
                 if (post(msgtype, value, wbd))
                         old_value = value;
                 else
@@ -274,9 +293,11 @@ int main(int argc, char *argv[])
 {
         progname = basename(argv[0]);
 
+#ifndef WITHOUT_READLINE
         using_history();
         rl_readline_name = const_cast<char *>(progname);
         rl_attempted_completion_function = history_completion;
+#endif
 
 #ifdef CUSTOM_WB_NAME
         const char *wbname = CUSTOM_WB_NAME;

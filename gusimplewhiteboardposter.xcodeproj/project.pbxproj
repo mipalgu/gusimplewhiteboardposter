@@ -16,6 +16,14 @@
 		F172A0AF172E78AF00A338D9 /* guwhiteboardposter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F172A047172E789500A338D9 /* guwhiteboardposter.cpp */; };
 		F172A0B0172E78AF00A338D9 /* guwhiteboardtypelist_c_typestrings_generated.c in Sources */ = {isa = PBXBuildFile; fileRef = F172A072172E789500A338D9 /* guwhiteboardtypelist_c_typestrings_generated.c */; };
 		F172A0F9172E797100A338D9 /* gu_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F172A0E4172E795D00A338D9 /* gu_util.cpp */; };
+		F1DF33A31D8AF4A00095D641 /* gusimplewhiteboardposter.cc in Sources */ = {isa = PBXBuildFile; fileRef = F1729FD1172E77FE00A338D9 /* gusimplewhiteboardposter.cc */; };
+		F1DF33A41D8AF4A00095D641 /* gugenericwhiteboardobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F172A01D172E789400A338D9 /* gugenericwhiteboardobject.cpp */; };
+		F1DF33A51D8AF4A00095D641 /* gusimplewhiteboard.c in Sources */ = {isa = PBXBuildFile; fileRef = F172A02A172E789400A338D9 /* gusimplewhiteboard.c */; };
+		F1DF33A61D8AF4A00095D641 /* guwhiteboardgetter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F172A045172E789500A338D9 /* guwhiteboardgetter.cpp */; };
+		F1DF33A71D8AF4A00095D641 /* guwhiteboardposter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F172A047172E789500A338D9 /* guwhiteboardposter.cpp */; };
+		F1DF33A81D8AF4A00095D641 /* guwhiteboardtypelist_c_typestrings_generated.c in Sources */ = {isa = PBXBuildFile; fileRef = F172A072172E789500A338D9 /* guwhiteboardtypelist_c_typestrings_generated.c */; };
+		F1DF33A91D8AF4A00095D641 /* gu_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F172A0E4172E795D00A338D9 /* gu_util.cpp */; };
+		F1DF33AD1D8AF4A00095D641 /* gusimplewhiteboardposter.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1729FD3172E77FE00A338D9 /* gusimplewhiteboardposter.1 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +76,13 @@
 			remoteGlobalIDString = F1C94DA31555D3C300B717DF;
 			remoteInfo = gusimplewhiteboardios;
 		};
+		F1DF339F1D8AF3B00095D641 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F172A052172E789500A338D9 /* guwhiteboardtypegenerator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F1511FCD1D3DF25B00224444;
+			remoteInfo = guwhiteboardtypegenerator;
+		};
 		F1F42EDA18E014410042DDAB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F172A02C172E789400A338D9 /* gusimplewhiteboard.xcodeproj */;
@@ -99,6 +114,16 @@
 			dstSubfolderSpec = 0;
 			files = (
 				F1729FD4172E77FE00A338D9 /* gusimplewhiteboardposter.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F1DF33AC1D8AF4A00095D641 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				F1DF33AD1D8AF4A00095D641 /* gusimplewhiteboardposter.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -280,6 +305,7 @@
 		F172A0F7172E795D00A338D9 /* Useful.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Useful.h; sourceTree = "<group>"; };
 		F172A0F8172E795D00A338D9 /* warning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = warning.h; sourceTree = "<group>"; };
 		F172A0FA172E7EE700A338D9 /* libreadline.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libreadline.6.dylib; path = ../../../../../../../../opt/local/lib/libreadline.6.dylib; sourceTree = "<group>"; };
+		F1DF33B11D8AF4A00095D641 /* gusimplewhiteboardposter_noreadline */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gusimplewhiteboardposter_noreadline; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +314,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1694CE81863D9B700307537 /* libreadline.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1DF33AA1D8AF4A00095D641 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				F1729FCE172E77FE00A338D9 /* gusimplewhiteboardposter */,
+				F1DF33B11D8AF4A00095D641 /* gusimplewhiteboardposter_noreadline */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -463,6 +497,7 @@
 		F172A053172E789500A338D9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				F1DF33A01D8AF3B00095D641 /* guwhiteboardtypegenerator */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -736,6 +771,23 @@
 			productReference = F1729FCE172E77FE00A338D9 /* gusimplewhiteboardposter */;
 			productType = "com.apple.product-type.tool";
 		};
+		F1DF33A11D8AF4A00095D641 /* gusimplewhiteboardposter_noreadline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1DF33AE1D8AF4A00095D641 /* Build configuration list for PBXNativeTarget "gusimplewhiteboardposter_noreadline" */;
+			buildPhases = (
+				F1DF33A21D8AF4A00095D641 /* Sources */,
+				F1DF33AA1D8AF4A00095D641 /* Frameworks */,
+				F1DF33AC1D8AF4A00095D641 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gusimplewhiteboardposter_noreadline;
+			productName = gusimplewhiteboardposter;
+			productReference = F1DF33B11D8AF4A00095D641 /* gusimplewhiteboardposter_noreadline */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -775,6 +827,7 @@
 				F1729FCD172E77FE00A338D9 /* gusimplewhiteboardposter */,
 				F1F42EE118E015650042DDAB /* gusimplewhiteboardposter_mk */,
 				F1FABD0019026D72001AD476 /* Lgusimplewhiteboardposter */,
+				F1DF33A11D8AF4A00095D641 /* gusimplewhiteboardposter_noreadline */,
 			);
 		};
 /* End PBXProject section */
@@ -829,6 +882,13 @@
 			remoteRef = F172A0A9172E789500A338D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		F1DF33A01D8AF3B00095D641 /* guwhiteboardtypegenerator */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = guwhiteboardtypegenerator;
+			remoteRef = F1DF339F1D8AF3B00095D641 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		F1F42EDB18E014410042DDAB /* SimpleWhiteboardTest.bundle */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
@@ -864,6 +924,20 @@
 				F172A0AF172E78AF00A338D9 /* guwhiteboardposter.cpp in Sources */,
 				F172A0B0172E78AF00A338D9 /* guwhiteboardtypelist_c_typestrings_generated.c in Sources */,
 				F172A0F9172E797100A338D9 /* gu_util.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1DF33A21D8AF4A00095D641 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1DF33A31D8AF4A00095D641 /* gusimplewhiteboardposter.cc in Sources */,
+				F1DF33A41D8AF4A00095D641 /* gugenericwhiteboardobject.cpp in Sources */,
+				F1DF33A51D8AF4A00095D641 /* gusimplewhiteboard.c in Sources */,
+				F1DF33A61D8AF4A00095D641 /* guwhiteboardgetter.cpp in Sources */,
+				F1DF33A71D8AF4A00095D641 /* guwhiteboardposter.cpp in Sources */,
+				F1DF33A81D8AF4A00095D641 /* guwhiteboardtypelist_c_typestrings_generated.c in Sources */,
+				F1DF33A91D8AF4A00095D641 /* gu_util.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -922,10 +996,15 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					/opt/local/include,
+					"$(inherited)",
 					"$(SRCROOT)/../gusimplewhiteboard",
 					"$(SRCROOT)/../../Common",
 					"$(SRCROOT)/../gusimplewhiteboard/typeClassDefs",
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
@@ -960,10 +1039,15 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					/opt/local/include,
+					"$(inherited)",
 					"$(SRCROOT)/../gusimplewhiteboard",
 					"$(SRCROOT)/../../Common",
 					"$(SRCROOT)/../gusimplewhiteboard/typeClassDefs",
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CFLAGS = "-Weverything";
@@ -974,10 +1058,7 @@
 		F1729FD8172E77FE00A338D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/opt/local/lib,
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -986,10 +1067,33 @@
 		F1729FD9172E77FE00A338D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LIBRARY_SEARCH_PATHS = (
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F1DF33AF1D8AF4A00095D641 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					/opt/local/lib,
+					"WITHOUT_READLINE=1",
 				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F1DF33B01D8AF4A00095D641 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"WITHOUT_READLINE=1",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1104,6 +1208,15 @@
 			buildConfigurations = (
 				F1729FD8172E77FE00A338D9 /* Debug */,
 				F1729FD9172E77FE00A338D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1DF33AE1D8AF4A00095D641 /* Build configuration list for PBXNativeTarget "gusimplewhiteboardposter_noreadline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1DF33AF1D8AF4A00095D641 /* Debug */,
+				F1DF33B01D8AF4A00095D641 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
