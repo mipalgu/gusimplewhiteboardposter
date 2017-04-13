@@ -16,9 +16,24 @@
 		F172A0AF172E78AF00A338D9 /* guwhiteboardposter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F172A047172E789500A338D9 /* guwhiteboardposter.cpp */; };
 		F172A0B0172E78AF00A338D9 /* guwhiteboardtypelist_c_typestrings_generated.c in Sources */ = {isa = PBXBuildFile; fileRef = F172A072172E789500A338D9 /* guwhiteboardtypelist_c_typestrings_generated.c */; };
 		F172A0F9172E797100A338D9 /* gu_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F172A0E4172E795D00A338D9 /* gu_util.cpp */; };
+		F1DF33A31D8AF4A00095D641 /* gusimplewhiteboardposter.cc in Sources */ = {isa = PBXBuildFile; fileRef = F1729FD1172E77FE00A338D9 /* gusimplewhiteboardposter.cc */; };
+		F1DF33A41D8AF4A00095D641 /* gugenericwhiteboardobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F172A01D172E789400A338D9 /* gugenericwhiteboardobject.cpp */; };
+		F1DF33A51D8AF4A00095D641 /* gusimplewhiteboard.c in Sources */ = {isa = PBXBuildFile; fileRef = F172A02A172E789400A338D9 /* gusimplewhiteboard.c */; };
+		F1DF33A61D8AF4A00095D641 /* guwhiteboardgetter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F172A045172E789500A338D9 /* guwhiteboardgetter.cpp */; };
+		F1DF33A71D8AF4A00095D641 /* guwhiteboardposter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F172A047172E789500A338D9 /* guwhiteboardposter.cpp */; };
+		F1DF33A81D8AF4A00095D641 /* guwhiteboardtypelist_c_typestrings_generated.c in Sources */ = {isa = PBXBuildFile; fileRef = F172A072172E789500A338D9 /* guwhiteboardtypelist_c_typestrings_generated.c */; };
+		F1DF33A91D8AF4A00095D641 /* gu_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F172A0E4172E795D00A338D9 /* gu_util.cpp */; };
+		F1DF33AD1D8AF4A00095D641 /* gusimplewhiteboardposter.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1729FD3172E77FE00A338D9 /* gusimplewhiteboardposter.1 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F10F98F61D129DFB00B72C97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F172A02C172E789400A338D9 /* gusimplewhiteboard.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F19F051F1B3A7EBD00F34B4D;
+			remoteInfo = swift_wb;
+		};
 		F1694CE51863D99200307537 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F172A02C172E789400A338D9 /* gusimplewhiteboard.xcodeproj */;
@@ -61,6 +76,13 @@
 			remoteGlobalIDString = F1C94DA31555D3C300B717DF;
 			remoteInfo = gusimplewhiteboardios;
 		};
+		F1DF339F1D8AF3B00095D641 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F172A052172E789500A338D9 /* guwhiteboardtypegenerator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F1511FCD1D3DF25B00224444;
+			remoteInfo = guwhiteboardtypegenerator;
+		};
 		F1F42EDA18E014410042DDAB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F172A02C172E789400A338D9 /* gusimplewhiteboard.xcodeproj */;
@@ -92,6 +114,16 @@
 			dstSubfolderSpec = 0;
 			files = (
 				F1729FD4172E77FE00A338D9 /* gusimplewhiteboardposter.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F1DF33AC1D8AF4A00095D641 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				F1DF33AD1D8AF4A00095D641 /* gusimplewhiteboardposter.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -140,10 +172,6 @@
 		F172A046172E789500A338D9 /* guwhiteboardgetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = guwhiteboardgetter.h; sourceTree = "<group>"; };
 		F172A047172E789500A338D9 /* guwhiteboardposter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = guwhiteboardposter.cpp; sourceTree = "<group>"; };
 		F172A048172E789500A338D9 /* guwhiteboardposter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = guwhiteboardposter.h; sourceTree = "<group>"; };
-		F172A04B172E789500A338D9 /* .cookie */ = {isa = PBXFileReference; lastKnownFileType = text; path = .cookie; sourceTree = "<group>"; };
-		F172A04C172E789500A338D9 /* .pre-build-cookie */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".pre-build-cookie"; sourceTree = "<group>"; };
-		F172A04D172E789500A338D9 /* guwhiteboardtypegenerator */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = guwhiteboardtypegenerator; sourceTree = "<group>"; };
-		F172A04E172E789500A338D9 /* guwhiteboardtypegenerator.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = guwhiteboardtypegenerator.o; sourceTree = "<group>"; };
 		F172A04F172E789500A338D9 /* create_map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = create_map.h; sourceTree = "<group>"; };
 		F172A050172E789500A338D9 /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
 		F172A051172E789500A338D9 /* guwhiteboardtypegenerator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = guwhiteboardtypegenerator.cpp; sourceTree = "<group>"; };
@@ -195,14 +223,14 @@
 		F172A086172E789500A338D9 /* MOTION_SDK_Interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MOTION_SDK_Interface.h; sourceTree = "<group>"; };
 		F172A087172E789500A338D9 /* NAO_State.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAO_State.h; sourceTree = "<group>"; };
 		F172A088172E789500A338D9 /* Point2D.h */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = Point2D.h; sourceTree = "<group>"; };
-		F172A089172E789500A338D9 /* SENSORS_BodySensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORS_BodySensors.h; sourceTree = "<group>"; };
-		F172A08A172E789500A338D9 /* SENSORS_FootSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORS_FootSensors.h; sourceTree = "<group>"; };
-		F172A08B172E789500A338D9 /* SENSORS_LedsSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORS_LedsSensors.h; sourceTree = "<group>"; };
-		F172A08C172E789500A338D9 /* SENSORS_LegJointSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORS_LegJointSensors.h; sourceTree = "<group>"; };
-		F172A08D172E789500A338D9 /* SENSORS_LegJointTemps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORS_LegJointTemps.h; sourceTree = "<group>"; };
-		F172A08E172E789500A338D9 /* SENSORS_SonarSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORS_SonarSensors.h; sourceTree = "<group>"; };
-		F172A08F172E789500A338D9 /* SENSORS_TorsoJointSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORS_TorsoJointSensors.h; sourceTree = "<group>"; };
-		F172A090172E789500A338D9 /* SENSORS_TorsoJointTemps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORS_TorsoJointTemps.h; sourceTree = "<group>"; };
+		F172A089172E789500A338D9 /* SENSORSBodySensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSBodySensors.h; sourceTree = "<group>"; };
+		F172A08A172E789500A338D9 /* SENSORSFootSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSFootSensors.h; sourceTree = "<group>"; };
+		F172A08B172E789500A338D9 /* SENSORSLedsSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSLedsSensors.h; sourceTree = "<group>"; };
+		F172A08C172E789500A338D9 /* SENSORSLegJointSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSLegJointSensors.h; sourceTree = "<group>"; };
+		F172A08D172E789500A338D9 /* SENSORSLegJointTemps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSLegJointTemps.h; sourceTree = "<group>"; };
+		F172A08E172E789500A338D9 /* SENSORSSonarSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSSonarSensors.h; sourceTree = "<group>"; };
+		F172A08F172E789500A338D9 /* SENSORSTorsoJointSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSTorsoJointSensors.h; sourceTree = "<group>"; };
+		F172A090172E789500A338D9 /* SENSORSTorsoJointTemps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSTorsoJointTemps.h; sourceTree = "<group>"; };
 		F172A091172E789500A338D9 /* UDPReceiverNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UDPReceiverNotification.h; sourceTree = "<group>"; };
 		F172A092172E789500A338D9 /* Vision_Control.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vision_Control.h; sourceTree = "<group>"; };
 		F172A093172E789500A338D9 /* Vision_Objects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vision_Objects.h; sourceTree = "<group>"; };
@@ -223,7 +251,7 @@
 		F172A0BB172E795D00A338D9 /* alternative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = alternative.h; sourceTree = "<group>"; };
 		F172A0BC172E795D00A338D9 /* cdecl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cdecl.h; sourceTree = "<group>"; };
 		F172A0BD172E795D00A338D9 /* defs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = defs.h; sourceTree = "<group>"; };
-		F172A0BE172E795D00A338D9 /* domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = domain.h; sourceTree = "<group>"; };
+		F172A0BE172E795D00A338D9 /* domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = domain.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		F172A0BF172E795D00A338D9 /* error.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = error.h; sourceTree = "<group>"; };
 		F172A0C0172E795D00A338D9 /* gccmacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gccmacro.h; sourceTree = "<group>"; };
 		F172A0C1172E795D00A338D9 /* llist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = llist.h; sourceTree = "<group>"; };
@@ -277,6 +305,7 @@
 		F172A0F7172E795D00A338D9 /* Useful.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Useful.h; sourceTree = "<group>"; };
 		F172A0F8172E795D00A338D9 /* warning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = warning.h; sourceTree = "<group>"; };
 		F172A0FA172E7EE700A338D9 /* libreadline.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libreadline.6.dylib; path = ../../../../../../../../opt/local/lib/libreadline.6.dylib; sourceTree = "<group>"; };
+		F1DF33B11D8AF4A00095D641 /* gusimplewhiteboardposter_noreadline */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gusimplewhiteboardposter_noreadline; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +314,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1694CE81863D9B700307537 /* libreadline.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1DF33AA1D8AF4A00095D641 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				F1729FCE172E77FE00A338D9 /* gusimplewhiteboardposter */,
+				F1DF33B11D8AF4A00095D641 /* gusimplewhiteboardposter_noreadline */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -398,6 +435,7 @@
 				F1F42EDB18E014410042DDAB /* SimpleWhiteboardTest.bundle */,
 				F1FABD1319026D72001AD476 /* wbperf */,
 				F1FABD1519026D72001AD476 /* wbPerfTests.octest */,
+				F10F98F71D129DFB00B72C97 /* swift_wb */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -446,7 +484,6 @@
 		F172A049172E789500A338D9 /* guwhiteboardtypegenerator */ = {
 			isa = PBXGroup;
 			children = (
-				F172A04A172E789500A338D9 /* build.host */,
 				F172A04F172E789500A338D9 /* create_map.h */,
 				F172A050172E789500A338D9 /* GNUmakefile */,
 				F172A051172E789500A338D9 /* guwhiteboardtypegenerator.cpp */,
@@ -457,20 +494,10 @@
 			path = guwhiteboardtypegenerator;
 			sourceTree = "<group>";
 		};
-		F172A04A172E789500A338D9 /* build.host */ = {
-			isa = PBXGroup;
-			children = (
-				F172A04B172E789500A338D9 /* .cookie */,
-				F172A04C172E789500A338D9 /* .pre-build-cookie */,
-				F172A04D172E789500A338D9 /* guwhiteboardtypegenerator */,
-				F172A04E172E789500A338D9 /* guwhiteboardtypegenerator.o */,
-			);
-			path = build.host;
-			sourceTree = "<group>";
-		};
 		F172A053172E789500A338D9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				F1DF33A01D8AF3B00095D641 /* guwhiteboardtypegenerator */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -535,14 +562,14 @@
 				F172A086172E789500A338D9 /* MOTION_SDK_Interface.h */,
 				F172A087172E789500A338D9 /* NAO_State.h */,
 				F172A088172E789500A338D9 /* Point2D.h */,
-				F172A089172E789500A338D9 /* SENSORS_BodySensors.h */,
-				F172A08A172E789500A338D9 /* SENSORS_FootSensors.h */,
-				F172A08B172E789500A338D9 /* SENSORS_LedsSensors.h */,
-				F172A08C172E789500A338D9 /* SENSORS_LegJointSensors.h */,
-				F172A08D172E789500A338D9 /* SENSORS_LegJointTemps.h */,
-				F172A08E172E789500A338D9 /* SENSORS_SonarSensors.h */,
-				F172A08F172E789500A338D9 /* SENSORS_TorsoJointSensors.h */,
-				F172A090172E789500A338D9 /* SENSORS_TorsoJointTemps.h */,
+				F172A089172E789500A338D9 /* SENSORSBodySensors.h */,
+				F172A08A172E789500A338D9 /* SENSORSFootSensors.h */,
+				F172A08B172E789500A338D9 /* SENSORSLedsSensors.h */,
+				F172A08C172E789500A338D9 /* SENSORSLegJointSensors.h */,
+				F172A08D172E789500A338D9 /* SENSORSLegJointTemps.h */,
+				F172A08E172E789500A338D9 /* SENSORSSonarSensors.h */,
+				F172A08F172E789500A338D9 /* SENSORSTorsoJointSensors.h */,
+				F172A090172E789500A338D9 /* SENSORSTorsoJointTemps.h */,
 				F172A091172E789500A338D9 /* UDPReceiverNotification.h */,
 				F172A092172E789500A338D9 /* Vision_Control.h */,
 				F172A093172E789500A338D9 /* Vision_Objects.h */,
@@ -744,14 +771,36 @@
 			productReference = F1729FCE172E77FE00A338D9 /* gusimplewhiteboardposter */;
 			productType = "com.apple.product-type.tool";
 		};
+		F1DF33A11D8AF4A00095D641 /* gusimplewhiteboardposter_noreadline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1DF33AE1D8AF4A00095D641 /* Build configuration list for PBXNativeTarget "gusimplewhiteboardposter_noreadline" */;
+			buildPhases = (
+				F1DF33A21D8AF4A00095D641 /* Sources */,
+				F1DF33AA1D8AF4A00095D641 /* Frameworks */,
+				F1DF33AC1D8AF4A00095D641 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gusimplewhiteboardposter_noreadline;
+			productName = gusimplewhiteboardposter;
+			productReference = F1DF33B11D8AF4A00095D641 /* gusimplewhiteboardposter_noreadline */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		F1729FC6172E77FE00A338D9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Rene Hexel";
+				TargetAttributes = {
+					F1729FCD172E77FE00A338D9 = {
+						LastSwiftMigration = 0800;
+					};
+				};
 			};
 			buildConfigurationList = F1729FC9172E77FE00A338D9 /* Build configuration list for PBXProject "gusimplewhiteboardposter" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -778,11 +827,19 @@
 				F1729FCD172E77FE00A338D9 /* gusimplewhiteboardposter */,
 				F1F42EE118E015650042DDAB /* gusimplewhiteboardposter_mk */,
 				F1FABD0019026D72001AD476 /* Lgusimplewhiteboardposter */,
+				F1DF33A11D8AF4A00095D641 /* gusimplewhiteboardposter_noreadline */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		F10F98F71D129DFB00B72C97 /* swift_wb */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = swift_wb;
+			remoteRef = F10F98F61D129DFB00B72C97 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		F1694CE61863D99200307537 /* guudpwhiteboard */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
@@ -825,6 +882,13 @@
 			remoteRef = F172A0A9172E789500A338D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		F1DF33A01D8AF3B00095D641 /* guwhiteboardtypegenerator */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = guwhiteboardtypegenerator;
+			remoteRef = F1DF339F1D8AF3B00095D641 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		F1F42EDB18E014410042DDAB /* SimpleWhiteboardTest.bundle */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
@@ -863,6 +927,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1DF33A21D8AF4A00095D641 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1DF33A31D8AF4A00095D641 /* gusimplewhiteboardposter.cc in Sources */,
+				F1DF33A41D8AF4A00095D641 /* gugenericwhiteboardobject.cpp in Sources */,
+				F1DF33A51D8AF4A00095D641 /* gusimplewhiteboard.c in Sources */,
+				F1DF33A61D8AF4A00095D641 /* guwhiteboardgetter.cpp in Sources */,
+				F1DF33A71D8AF4A00095D641 /* guwhiteboardposter.cpp in Sources */,
+				F1DF33A81D8AF4A00095D641 /* guwhiteboardtypelist_c_typestrings_generated.c in Sources */,
+				F1DF33A91D8AF4A00095D641 /* gu_util.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -891,15 +969,20 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -908,13 +991,20 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					/opt/local/include,
+					"$(inherited)",
 					"$(SRCROOT)/../gusimplewhiteboard",
 					"$(SRCROOT)/../../Common",
 					"$(SRCROOT)/../gusimplewhiteboard/typeClassDefs",
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
@@ -929,24 +1019,35 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					/opt/local/include,
+					"$(inherited)",
 					"$(SRCROOT)/../gusimplewhiteboard",
 					"$(SRCROOT)/../../Common",
 					"$(SRCROOT)/../gusimplewhiteboard/typeClassDefs",
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CFLAGS = "-Weverything";
@@ -957,22 +1058,44 @@
 		F1729FD8172E77FE00A338D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/opt/local/lib,
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		F1729FD9172E77FE00A338D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/opt/local/lib,
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F1DF33AF1D8AF4A00095D641 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"WITHOUT_READLINE=1",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F1DF33B01D8AF4A00095D641 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"WITHOUT_READLINE=1",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1085,6 +1208,15 @@
 			buildConfigurations = (
 				F1729FD8172E77FE00A338D9 /* Debug */,
 				F1729FD9172E77FE00A338D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1DF33AE1D8AF4A00095D641 /* Build configuration list for PBXNativeTarget "gusimplewhiteboardposter_noreadline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1DF33AF1D8AF4A00095D641 /* Debug */,
+				F1DF33B01D8AF4A00095D641 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

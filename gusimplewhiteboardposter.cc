@@ -2,7 +2,7 @@
  *  gusimplewhiteboardposter.cc
  *
  *  Created by Rene Hexel on 29/04/13.
- *  Copyright (c) 2013, 2014 Rene Hexel.
+ *  Copyright (c) 2013, 2014, 2016 Rene Hexel.
  *  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -62,10 +62,20 @@
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wpadded"
+#pragma clang diagnostic ignored "-Wreserved-id-macro"
+#pragma clang diagnostic ignored "-Wunused-macros"
 
+#undef __block
+#define __block _xblock
+#include <unistd.h> //optargs
 #include <libgen.h>
+#undef __block
+#define __block __attribute__((__blocks__(byref)))
+
+#ifndef WITHOUT_READLINE
 #include <readline/readline.h>
 #include <readline/history.h>
+#endif
 
 #include "gu_util.h"
 #include "gugenericwhiteboardobject.h"
@@ -78,6 +88,12 @@
 
 static const char *progname;
 static const char * const SHUTDOWN_WHITEBOARD = "SHUTDOWN_WHITEBOARD";
+
+using namespace std;
+using namespace guWhiteboard;
+
+
+#ifndef WITHOUT_READLINE
 
 /**
  * Return a match if the given text can be found in the history list
@@ -92,7 +108,7 @@ static char *history_matcher(const char *text, int state)
                 list_index = 0;
                 len = strlen(text);
         }
-        
+
         for (; list_index < history_length;)
         {
                 HIST_ENTRY *entry = history_get(history_base+list_index);
@@ -135,9 +151,6 @@ static const char *last_history(void)
         return entry->line;
 }
 
-using namespace std;
-using namespace guWhiteboard;
-
 /**
  * load message type history
  */
@@ -163,13 +176,14 @@ static void load_value_history(string msgtype)
         read_history(VALUE_HISTORY(msgtype));
 }
 
+#endif // WITHOUT_READLINE
 
 
 
 /**
  * read intput from the user and post
  */
-static int read_input_and_post_to_whiteboard(FILE *in)
+static int read_input_and_post_to_whiteboard(gu_simple_whiteboard_descriptor *wbd, FILE *in)
 {
 	string previous_type, prompt, old_value;
         char *line = NULL;
@@ -178,11 +192,14 @@ static int read_input_and_post_to_whiteboard(FILE *in)
 
         do
         {
+#ifndef WITHOUT_READLINE
                 if (in != stdin)
                 {
+#endif
                         linelen = getline(&line, &linecap, in);
                         if (linelen <= 0)
                                 return ferror(in) ? EXIT_FAILURE : EXIT_SUCCESS;
+#ifndef WITHOUT_READLINE
                 }
                 else
                 {
@@ -195,15 +212,18 @@ static int read_input_and_post_to_whiteboard(FILE *in)
                         prompt = string("msg type (") + previous_type + ")? ";
                         line = readline(prompt.c_str());
                 }
+#endif
                 string msgtype(line);
                 gu_trim(msgtype);
                 if (!msgtype.length())
                         msgtype = previous_type;
+#ifndef WITHOUT_READLINE
                 else if (in == stdin && msgtype != previous_type)
                 {
                         add_history(msgtype.c_str());
                         write_history(TYPE_HISTORY);
                 }
+#endif
                 if (msgtype == "exit" || msgtype == "quit")
                         return EXIT_SUCCESS;
                 if (msgtype == SHUTDOWN_WHITEBOARD)
@@ -214,7 +234,7 @@ static int read_input_and_post_to_whiteboard(FILE *in)
                 try
                 {
                         previous_type = msgtype;
-                        old_value = getmsg(msgtype);
+                        old_value = getmsg(msgtype, NULL, wbd);
                         if (old_value == "##unsupported##")
                         {
                                 cerr << msgtype << " (" << types_map[msgtype] << "): unsupported string conversion" << endl;
@@ -226,11 +246,14 @@ static int read_input_and_post_to_whiteboard(FILE *in)
                         cerr << msgtype << " (" << types_map[msgtype] << ") does not support string conversion" << endl;
                         continue;
                 }
+#ifndef WITHOUT_READLINE
                 if (in != stdin)
                 {
+#endif
                         linelen = getline(&line, &linecap, in);
                         if (linelen <= 0)
                                 return ferror(in) ? EXIT_FAILURE : EXIT_SUCCESS;
+#ifndef WITHOUT_READLINE
                 }
                 else
                 {
@@ -238,16 +261,19 @@ static int read_input_and_post_to_whiteboard(FILE *in)
                         prompt = string("value (") + old_value + ")? ";
                         line = readline(prompt.c_str());
                 }
+#endif
                 string value(line);
                 gu_trim(value);
                 if (!value.length())
                         value = old_value;
+#ifndef WITHOUT_READLINE
                 else if (in == stdin && value != old_value)
                 {
                         add_history(value.c_str());
                         write_history(VALUE_HISTORY(msgtype));
                 }
-                if (post(msgtype, value))
+#endif
+                if (post(msgtype, value, wbd))
                         old_value = value;
                 else
                         cerr << "Could not set " << msgtype << " (" << types_map[msgtype] << ") to '" << value << "'" << endl;
@@ -263,15 +289,39 @@ static int read_input_and_post_to_whiteboard(FILE *in)
  * @param argv  no parameters are used except for the program name
  * @return EXIT_SUCCESS if exiting normally, EXIT_FAILURE if SHUTDOWN_WHITEBOARD command was issued or an unrecoverable error occurred.
  */
-int main(int /*argc*/, char *argv[])
+int main(int argc, char *argv[])
 {
         progname = basename(argv[0]);
 
+#ifndef WITHOUT_READLINE
         using_history();
         rl_readline_name = const_cast<char *>(progname);
         rl_attempted_completion_function = history_completion;
+#endif
 
-        return read_input_and_post_to_whiteboard(stdin);
+#ifdef CUSTOM_WB_NAME
+        const char *wbname = CUSTOM_WB_NAME;
+#else
+        const char *wbname = NULL;
+#endif
+        gu_simple_whiteboard_descriptor *wbd = NULL;
+        int ch;
+        while ((ch = getopt(argc, argv, "w:")) != -1) switch (ch)
+        {
+            case 'w':
+                wbname = optarg;
+                break;
+            case '?':
+            default:
+                fprintf(stderr, "Usage: %s [-w whiteboard_name]\n", argv[0]);
+                exit(EXIT_FAILURE);
+        }
+
+        if (wbname) wbd = gsw_new_whiteboard(wbname);
+        int rv = read_input_and_post_to_whiteboard(wbd, stdin);
+        if (wbd) gsw_free_whiteboard(wbd);
+
+        return rv;
 }
 
 

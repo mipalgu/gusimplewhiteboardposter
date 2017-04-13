@@ -3,12 +3,15 @@
 #
 # GU whiteboard poster module Makefile
 #
-BIN=gusimplewhiteboardposter
-
-ALL_TARGETS=host robot doc
+ALL_TARGETS=host robot analyse xc doc
 CI_SERVER_DOC_SUBDIR=utils
+CATKIN_COMPILE_UTIL=YES
 
+.ifndef TARGET
 USE_READLINE=yes
+.else
+SPECIFIC_CPPFLAGS+=-DWITHOUT_READLINE
+.endif
 
 CC_SRCS=gusimplewhiteboardposter.cc
 HDRS=
