@@ -93,6 +93,13 @@ using namespace std;
 using namespace guWhiteboard;
 
 
+static __attribute__((__noreturn__)) void usage(const char *cmd)
+{
+    cerr << "Usage: " << cmd << "\t[-w whiteboard_name]\n\t\t\t[-m Message Type Str]\n\t\t\t[-d String Constructor for Message Type Str]\n\t\t\tNote: One msg/data posting per invocation." << endl;
+    exit(EXIT_FAILURE);
+}
+
+
 #ifndef WITHOUT_READLINE
 
 /**
@@ -283,6 +290,31 @@ static int read_input_and_post_to_whiteboard(gu_simple_whiteboard_descriptor *wb
         return EXIT_SUCCESS;
 }
 
+static int cli_post_to_whiteboard(gu_simple_whiteboard_descriptor *wbd, const char* msgtype, const char* data)
+{
+    // Get message type
+    string old_value;
+    try
+    {
+        old_value = getmsg(msgtype, NULL, wbd);
+        if (old_value == "##unsupported##")
+        {
+            cerr << msgtype << " (" << types_map[msgtype] << "): unsupported string conversion" << endl;
+            return EXIT_FAILURE;
+        }
+    }
+    catch (...)
+    {
+        cerr << msgtype << " (" << types_map[msgtype] << ") does not support string conversion" << endl;
+        return EXIT_FAILURE;
+    }
+    if (!post(msgtype, data, wbd))
+    {
+        cerr << "Could not set " << msgtype << " (" << types_map[msgtype] << ") to '" << data << "'" << endl;
+        return EXIT_FAILURE;
+    }
+    return EXIT_SUCCESS;
+}
 
 /**
  * Simplewhiteboard poster main function.
@@ -292,6 +324,9 @@ static int read_input_and_post_to_whiteboard(gu_simple_whiteboard_descriptor *wb
 int main(int argc, char *argv[])
 {
         progname = basename(argv[0]);
+        bool cli = false;
+        const char* msgType;
+        const char* msgData;
 
 #ifndef WITHOUT_READLINE
         using_history();
@@ -306,19 +341,35 @@ int main(int argc, char *argv[])
 #endif
         gu_simple_whiteboard_descriptor *wbd = NULL;
         int ch;
-        while ((ch = getopt(argc, argv, "w:")) != -1) switch (ch)
+        while ((ch = getopt(argc, argv, "w:m:d:")) != -1) switch (ch)
         {
             case 'w':
                 wbname = optarg;
                 break;
+            case 'm':
+                if (cli)
+                {
+                    usage(argv[0]);  // Caller has already used '-m'.
+                }
+                msgType = optarg;
+                cli = true;
+                break;
+            case 'd':
+                msgData = optarg;
+                break;
             case '?':
             default:
-                fprintf(stderr, "Usage: %s [-w whiteboard_name]\n", argv[0]);
-                exit(EXIT_FAILURE);
+                usage(argv[0]);
         }
 
+        int rv = 0;
         if (wbname) wbd = gsw_new_whiteboard(wbname);
-        int rv = read_input_and_post_to_whiteboard(wbd, stdin);
+        if (cli)
+        {
+            rv = cli_post_to_whiteboard(wbd, msgType, msgData);
+        } else {
+            rv = read_input_and_post_to_whiteboard(wbd, stdin);
+        }
         if (wbd) gsw_free_whiteboard(wbd);
 
         return rv;
