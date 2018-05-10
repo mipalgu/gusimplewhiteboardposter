@@ -135,7 +135,7 @@ static char *history_matcher(const char *text, int state)
         }
         
         /* no names matched */
-        return NULL;
+        return NULLPTR;
 }
 
 /**
@@ -151,9 +151,9 @@ static char **history_completion (const char *text, int /*start*/, int /*end*/)
  */
 static const char *last_history(void)
 {
-        if (history_length <= 0) return NULL;
+        if (history_length <= 0) return NULLPTR;
         HIST_ENTRY *entry = history_get(history_base+history_length-1);
-        if (!entry) return NULL;
+        if (!entry) return NULLPTR;
 
         return entry->line;
 }
@@ -193,7 +193,7 @@ static void load_value_history(string msgtype)
 static int read_input_and_post_to_whiteboard(gu_simple_whiteboard_descriptor *wbd, FILE *in)
 {
 	string previous_type, prompt, old_value;
-        char *line = NULL;
+        char *line = NULLPTR;
         size_t linecap = 0;
         ssize_t linelen;
 
@@ -241,7 +241,7 @@ static int read_input_and_post_to_whiteboard(gu_simple_whiteboard_descriptor *wb
                 try
                 {
                         previous_type = msgtype;
-                        old_value = getmsg(msgtype, NULL, wbd);
+                        old_value = getmsg(msgtype, NULLPTR, wbd);
                         if (old_value == "##unsupported##")
                         {
                                 cerr << msgtype << " (" << types_map[msgtype] << "): unsupported string conversion" << endl;
@@ -296,7 +296,7 @@ static int cli_post_to_whiteboard(gu_simple_whiteboard_descriptor *wbd, const ch
     string old_value;
     try
     {
-        old_value = getmsg(msgtype, NULL, wbd);
+        old_value = getmsg(msgtype, NULLPTR, wbd);
         if (old_value == "##unsupported##")
         {
             cerr << msgtype << " (" << types_map[msgtype] << "): unsupported string conversion" << endl;
@@ -337,9 +337,9 @@ int main(int argc, char *argv[])
 #ifdef CUSTOM_WB_NAME
         const char *wbname = CUSTOM_WB_NAME;
 #else
-        const char *wbname = NULL;
+        const char *wbname = NULLPTR;
 #endif
-        gu_simple_whiteboard_descriptor *wbd = NULL;
+        gu_simple_whiteboard_descriptor *wbd = NULLPTR;
         int ch;
         while ((ch = getopt(argc, argv, "w:m:d:")) != -1) switch (ch)
         {
