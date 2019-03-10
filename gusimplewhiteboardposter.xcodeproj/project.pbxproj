@@ -130,6 +130,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		31676E2622351274008E9605 /* SensorsBodySensors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorsBodySensors.h; sourceTree = "<group>"; };
+		31676E2722351274008E9605 /* SensorsFootSensors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorsFootSensors.h; sourceTree = "<group>"; };
 		F1694CE71863D9B700307537 /* libreadline.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libreadline.dylib; path = usr/lib/libreadline.dylib; sourceTree = SDKROOT; };
 		F16B9E881A31483000552CE6 /* gusimplewhiteboardposter.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = gusimplewhiteboardposter.md; sourceTree = "<group>"; };
 		F1729FCE172E77FE00A338D9 /* gusimplewhiteboardposter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gusimplewhiteboardposter; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,8 +225,6 @@
 		F172A086172E789500A338D9 /* MOTION_SDK_Interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MOTION_SDK_Interface.h; sourceTree = "<group>"; };
 		F172A087172E789500A338D9 /* NAO_State.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAO_State.h; sourceTree = "<group>"; };
 		F172A088172E789500A338D9 /* Point2D.h */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = Point2D.h; sourceTree = "<group>"; };
-		F172A089172E789500A338D9 /* SENSORSBodySensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSBodySensors.h; sourceTree = "<group>"; };
-		F172A08A172E789500A338D9 /* SENSORSFootSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSFootSensors.h; sourceTree = "<group>"; };
 		F172A08B172E789500A338D9 /* SENSORSLedsSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSLedsSensors.h; sourceTree = "<group>"; };
 		F172A08C172E789500A338D9 /* SENSORSLegJointSensors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSLegJointSensors.h; sourceTree = "<group>"; };
 		F172A08D172E789500A338D9 /* SENSORSLegJointTemps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SENSORSLegJointTemps.h; sourceTree = "<group>"; };
@@ -556,14 +556,14 @@
 		F172A082172E789500A338D9 /* typeClassDefs */ = {
 			isa = PBXGroup;
 			children = (
+				31676E2622351274008E9605 /* SensorsBodySensors.h */,
+				31676E2722351274008E9605 /* SensorsFootSensors.h */,
 				F172A083172E789500A338D9 /* FilteredVisionObject.h */,
 				F172A084172E789500A338D9 /* FSM_Control.h */,
 				F172A085172E789500A338D9 /* HAL_HeadTarget.h */,
 				F172A086172E789500A338D9 /* MOTION_SDK_Interface.h */,
 				F172A087172E789500A338D9 /* NAO_State.h */,
 				F172A088172E789500A338D9 /* Point2D.h */,
-				F172A089172E789500A338D9 /* SENSORSBodySensors.h */,
-				F172A08A172E789500A338D9 /* SENSORSFootSensors.h */,
 				F172A08B172E789500A338D9 /* SENSORSLedsSensors.h */,
 				F172A08C172E789500A338D9 /* SENSORSLegJointSensors.h */,
 				F172A08D172E789500A338D9 /* SENSORSLegJointTemps.h */,
