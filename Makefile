@@ -3,7 +3,7 @@
 #
 # GU whiteboard poster module Makefile
 #
-ALL_TARGETS=host atom atom1 geode analyse xc doc
+ALL_TARGETS=host atom analyse xc doc
 CI_SERVER_DOC_SUBDIR=utils
 CATKIN_COMPILE_UTIL=YES
 
