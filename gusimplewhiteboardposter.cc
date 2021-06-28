@@ -90,8 +90,7 @@ static const char *progname;
 static const char * const SHUTDOWN_WHITEBOARD = "SHUTDOWN_WHITEBOARD";
 
 using namespace std;
-using namespace guWhiteboard;
-
+using namespace CPP_WHITEBOARD_NAMESPACE;
 
 static __attribute__((__noreturn__)) void usage(const char *cmd)
 {
